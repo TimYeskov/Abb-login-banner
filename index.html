@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abb Cabinet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="section__form">
+        <header class="form__header">
+          <div>
+            <img src="img/logo.png" class="logo" />
+          </div>
+          <nav>
+            <li>az</li>
+            <li>en</li>
+            <li>ru</li>
+          </nav>
+        </header>
+        <main>
+          <div class="form__type">
+            <h2>ASAN imza</h2>
+            <span>/</span>
+            <h2 id="kobilOtp">Kobil Otp</h2>
+          </div>
+
+          <form>
+            <label for="number__container"> ASAN İmza mobil nömrəsi </label>
+            <div id="number__container">
+              <span>+994</span>
+              <input type="tel" id="number" />
+            </div>
+            <label for="asan_id"> ASAN İmza istifadəçi ID-si </label>
+            <input type="text" id="asan_id" />
+            <div class="buttons">
+              <button type="submit" class="login">Davam et</button>
+              <span>və ya</span>
+              <button type="submit" class="registration">Qeydiyyat</button>
+            </div>
+          </form>
+        </main>
+        <footer>
+          <img src="img/asan.png" />
+          <a>Köhnə İB-ə keçid</a>
+        </footer>
+      </section>
+      <section class="section__banner">
+        <div>
+          <img src="img/banner.png" alt="banner" />
+        </div>
+      </section>
+      <script>
+        const numberInput = document.getElementById("number");
+
+        numberInput.addEventListener("focus", () => {
+          numberInput.parentElement.classList.add("focused");
+        });
+
+        numberInput.addEventListener("blur", () => {
+          numberInput.parentElement.classList.remove("focused");
+        });
+      </script>
+    </div>
+  </body>
+</html>
